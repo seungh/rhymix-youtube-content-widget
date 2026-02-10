@@ -6,7 +6,7 @@
     <description xml:lang="en">Displays recent videos from a YouTube channel.</description>
     <version>1.0.0</version>
     <date>2026-02-10</date>
-    <author email_address="seungh.sh@gmail.com" link="">
+    <author email_address="seungh.sh@gmail.com" link="https://github.com/seungh/rhymix-youtube-content-widget">
         <name xml:lang="ko">seungh</name>
         <name xml:lang="en">seungh</name>
     </author>
