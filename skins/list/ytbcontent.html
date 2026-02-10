@@ -1,0 +1,49 @@
+@version(2)
+@load ("css/ytbcontent.css")
+
+<section class="ytbcontent ytbcontent-default-list" data-channel-id="{{ $ytb_data->channel_id }}">
+    <header class="ytbcontent-header">
+        @if ($widget_info->title)
+        <div class="ytbcontent-title">
+            <span class="ytbcontent-title-icon" aria-hidden="true"></span>
+            <span class="ytbcontent-title-text">{{ $widget_info->title }}</span>
+        </div>
+        @elseif ($ytb_data->channel_title)
+        <a class="ytbcontent-title ytbcontent-title-link" href="https://www.youtube.com/channel/{{ $ytb_data->channel_id }}"
+            @if ($widget_info->open_new_tab) target="_blank" rel="noopener noreferrer" @endif>
+            <span class="ytbcontent-title-icon" aria-hidden="true"></span>
+            <span class="ytbcontent-title-text">{{ $ytb_data->channel_title }}</span>
+        </a>
+        @endif
+    </header>
+
+    @if ($ytb_data->error)
+    <div class="ytbcontent-message is-error">{{ $ytb_data->error }}</div>
+    @elseif (!count($ytb_data->items))
+    <div class="ytbcontent-message">표시할 영상이 없습니다.</div>
+    @else
+    <ul class="ytbcontent-list-items">
+        @foreach ($ytb_data->items as $item)
+        <li class="ytbcontent-item">
+            <a class="ytbcontent-card" href="{{ $item->link }}"
+                @if ($widget_info->open_new_tab) target="_blank" rel="noopener noreferrer" @endif>
+                @if ($item->thumbnail)
+                <span class="ytbcontent-thumb" style="background-image: url('{{ $item->thumbnail }}')"></span>
+                @else
+                <span class="ytbcontent-thumb is-empty"></span>
+                @endif
+                <span class="ytbcontent-body">
+                    <span class="ytbcontent-item-title">{{ $item->title }}</span>
+                    @if ($item->description)
+                    <span class="ytbcontent-desc">{{ $item->description }}</span>
+                    @endif
+                    @if ($item->published_datetime)
+                    <span class="ytbcontent-published">{{ substr($item->published_datetime, 0, 10) }}</span>
+                    @endif
+                </span>
+            </a>
+        </li>
+        @endforeach
+    </ul>
+    @endif
+</section>

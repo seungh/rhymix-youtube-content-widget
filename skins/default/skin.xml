@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+    <title xml:lang="ko">기본스킨</title>
+    <title xml:lang="en">Default</title>
+    <description xml:lang="ko">단일 카드 및 원형 버튼 스크롤을 사용하는 기본 스킨</description>
+    <description xml:lang="en">Default skin with a single card and dot navigation</description>
+    <version>1.0.0</version>
+    <date>2026-02-10</date>
+    <author email_address="seungh.sh@gmail.com" link="https://github.com/seungh/rhymix-youtube-content-widget">
+        <name xml:lang="ko">seungh</name>
+        <name xml:lang="en">seungh</name>
+    </author>
+</skin>

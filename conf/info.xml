@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget version="0.2">
+    <title xml:lang="ko">유튜브 컨텐츠 위젯</title>
+    <title xml:lang="en">YouTube Content Widget</title>
+    <description xml:lang="ko">지정한 유튜브 채널에서 최신 영상을 가져와 표시하는 위젯입니다.</description>
+    <description xml:lang="en">Displays recent videos from a YouTube channel.</description>
+    <version>1.0.0</version>
+    <date>2026-02-10</date>
+    <author email_address="seungh.sh@gmail.com" link="">
+        <name xml:lang="ko">seungh</name>
+        <name xml:lang="en">seungh</name>
+    </author>
+    <extra_vars>
+        <group>
+            <title xml:lang="ko">기본 설정</title>
+            <title xml:lang="en">Basic Settings</title>
+            <var id="channel_id" type="text">
+                <name xml:lang="ko">채널 ID</name>
+                <name xml:lang="en">Channel ID</name>
+                <description xml:lang="ko">예: UCxxxxxxxxxxxxxxxxxxxxxx</description>
+                <description xml:lang="en">Example: UCxxxxxxxxxxxxxxxxxxxxxx</description>
+            </var>
+            <var id="title" type="text">
+                <name xml:lang="ko">위젯 제목</name>
+                <name xml:lang="en">Widget Title</name>
+                <description xml:lang="ko">비워두면 채널명이 표시됩니다.</description>
+                <description xml:lang="en">If empty, the channel title is shown.</description>
+            </var>
+            <var id="video_count" type="text">
+                <name xml:lang="ko">최대 표시 개수</name>
+                <name xml:lang="en">Max Videos</name>
+                <description xml:lang="ko">표시할 영상 개수 (기본값: 4, 최대 15개)</description>
+                <description xml:lang="en">Number of videos to show (default: 4, max 15)</description>
+            </var>
+            <var id="sort_order" type="select">
+                <name xml:lang="ko">정렬 순서</name>
+                <name xml:lang="en">Sort Order</name>
+                <description xml:lang="ko">RSS 피드에서 조회수/좋아요를 제공하지 않는 경우에는 최근 영상 순으로 반영됩니다.</description>
+                <description xml:lang="en">Views/likes are applied only when RSS provides them.</description>
+                <options>
+                    <value>recent</value>
+                    <name xml:lang="ko">최근</name>
+                    <name xml:lang="en">Most Recent</name>
+                </options>
+                <options>
+                    <value>views</value>
+                    <name xml:lang="ko">조회수</name>
+                    <name xml:lang="en">Most Viewed</name>
+                </options>
+                <options>
+                    <value>likes</value>
+                    <name xml:lang="ko">좋아요</name>
+                    <name xml:lang="en">Most Liked</name>
+                </options>
+                <options>
+                    <value>random</value>
+                    <name xml:lang="ko">무작위</name>
+                    <name xml:lang="en">Random</name>
+                </options>
+            </var>
+            <var id="cache_ttl" type="text">
+                <name xml:lang="ko">캐시 유지 시간(분)</name>
+                <name xml:lang="en">Cache TTL (minutes)</name>
+                <description xml:lang="ko">RSS 결과를 캐시에 보관하는 시간 (기본값: 10)</description>
+                <description xml:lang="en">Minutes to cache RSS results (default: 10)</description>
+            </var>
+            <var id="open_new_tab" type="select">
+                <name xml:lang="ko">새 탭으로 열기</name>
+                <name xml:lang="en">Open in New Tab</name>
+                <options>
+                    <value>Y</value>
+                    <name xml:lang="ko">사용</name>
+                    <name xml:lang="en">Use</name>
+                </options>
+                <options>
+                    <value>N</value>
+                    <name xml:lang="ko">미사용</name>
+                    <name xml:lang="en">Do not use</name>
+                </options>
+            </var>
+        </group>
+    </extra_vars>
+</widget>
