@@ -3,6 +3,14 @@
 ## 소개
 유튜브 채널 ID 값을 설정하면, 해당 채널의 RSS 피드에서 최신 영상을 가져와 라이믹스에서 보여주는 위젯입니다.
 
+<img width="382" height="420" alt="default" src="https://github.com/user-attachments/assets/5288c1e3-51e2-4329-a679-bb985d309300" />
+
+<img width="648" height="519" alt="list" src="https://github.com/user-attachments/assets/31191c5e-1d58-4ac0-b19e-e792f7957799" />
+
+<img width="922" height="340" alt="horizontal" src="https://github.com/user-attachments/assets/7df3f337-2eae-4db2-8a22-e42895865a1d" />
+
+<img width="321" height="586" alt="vertical" src="https://github.com/user-attachments/assets/414f242a-fc56-41ad-9c89-f0ebeacbffe1" />
+
 ## 설치방법
 * 설치경로: `./widgets/youtube_content`
 * 설치방법:
