@@ -13,8 +13,10 @@
     border-radius: 8px;
     padding: 10px 8px 10px 8px;
     color: var(--ytb-ink);
-    max-width: var(--ytb-max-width);
+    max-width: min(100%, var(--ytb-max-width));
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     margin: 4px auto;
     container-type: inline-size;
 }
@@ -98,6 +100,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     gap: 12px;
+    min-width: 0;
 }
 
 .ytbcontent-default .ytbcontent-list::-webkit-scrollbar {
@@ -108,6 +111,7 @@
 .ytbcontent-default .ytbcontent-item {
     margin: 0;
     flex: 0 0 100%;
+    max-width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -122,6 +126,8 @@
     border: 1px solid rgba(21, 21, 21, 0.08);
     box-shadow: 0 12px 24px rgba(21, 21, 21, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .ytbcontent-default .ytbcontent-card:hover {
